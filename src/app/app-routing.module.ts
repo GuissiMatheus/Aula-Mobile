@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'formulario-produto',
+    loadChildren: () => import('./formulario-produto/formulario-produto.module').then( m => m.FormularioProdutoPageModule)
+  },
+  {
+    path: 'formulario-produto/:id',
+    loadChildren: () => import('./formulario-produto/formulario-produto.module').then( m => m.FormularioProdutoPageModule)
+  },
 ];
 
 @NgModule({
