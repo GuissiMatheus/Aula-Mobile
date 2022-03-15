@@ -12,7 +12,7 @@
   </ion-header>
 
   <div>
-    <form [formGroup]="formulario" (ngSubmit)="salvarProduto()">
+    <form [formGroup]="formulario">
       <ion-item>
         <ion-label>Nome:</ion-label>
         <ion-input formControlName="descricao"></ion-input>
@@ -33,7 +33,7 @@
         <ion-label>Quantidade:</ion-label>
         <ion-input formControlName="quantidade"></ion-input>
       </ion-item>
-      <ion-button type="submit" color="success" expand="block">Salvar Produto</ion-button>
+      <ion-button (click)="salvarProduto()" color="success" expand="block">Salvar Produto</ion-button>
     </form>
   </div>
 </ion-content>

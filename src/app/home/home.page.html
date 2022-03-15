@@ -1,30 +1,17 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Lista de Produtos</ion-title>
+    <ion-title>Página Inicial</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Lista de Produtos</ion-title>
+      <ion-title size="large">Página Inicial</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div>
-    <ion-button expand="block" routerLink="/formulario-produto">Novo Produto</ion-button>
-
-    <ion-list>
-      <ion-item-sliding *ngFor="let item of produtos">
-        <ion-item>
-          <ion-label>{{ item.descricao }} | {{item.marca}} | R$ {{ item.valor }}</ion-label>
-        </ion-item>
-        <ion-item-options side="end">
-          <ion-item-option color="primary" (click)="visualizarProduto(item)">Ver</ion-item-option>
-          <ion-item-option color="warning" (click)="editarProduto(item.id)">Edit</ion-item-option>
-          <ion-item-option color="danger" (click)="unread(item)">Delete</ion-item-option>
-        </ion-item-options>
-      </ion-item-sliding>
-    </ion-list>
+  <div id="container">
+    <ion-button color="danger" expand="block" routerLink="/produtos">Produtos</ion-button>
   </div>
 </ion-content>
