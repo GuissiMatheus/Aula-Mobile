@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ProdutoService } from '../services/produto.service';
 import { Produto } from '../models/produto.model';
 
@@ -7,23 +8,19 @@ import { Produto } from '../models/produto.model';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
-  teste = new Produto();
-  
+export class HomePage implements OnInit {  
   public produtos: Array<Produto>;
 
   constructor(private produtoService: ProdutoService) {}
 
   ngOnInit() {
-    //this.teste.descricao = "oi"
-    //this.buscarProduto();
-    console.log(this.teste);
+    this.buscarProduto();
   }
 
   public buscarProduto() {
-    this.produtoService.getProdutos().subscribe((res : Array<Produto>) => {
-      console.log(res);
-      this.produtos = res;
+    this.produtoService.getProdutos().subscribe(
+      (res : Array<Produto>) => {
+        this.produtos = res;
     });
   }
 
