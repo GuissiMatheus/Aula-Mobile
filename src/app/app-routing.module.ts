@@ -15,6 +15,18 @@ const routes: Routes = [
     path: 'produtos',
     loadChildren: () => import('./produto/produto.module').then( m => m.ProdutoModule)
   },
+  {
+    path: 'teste',
+    loadChildren: () => import('./teste/teste.module').then( m => m.TestePageModule)
+  },
+  {
+    path: 'lista-categoria',
+    loadChildren: () => import('./pages/categoria/lista-categoria/lista-categoria.module').then( m => m.ListaCategoriaPageModule)
+  },
+  {
+    path: 'formulario-categoria',
+    loadChildren: () => import('./pages/categoria/formulario-categoria/formulario-categoria.module').then( m => m.FormularioCategoriaPageModule)
+  },
 ];
 
 @NgModule({
