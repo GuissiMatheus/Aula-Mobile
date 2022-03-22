@@ -12,20 +12,20 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'produtos',
-    loadChildren: () => import('./produto/produto.module').then( m => m.ProdutoModule)
-  },
-  {
-    path: 'teste',
-    loadChildren: () => import('./teste/teste.module').then( m => m.TestePageModule)
-  },
-  {
     path: 'lista-categoria',
     loadChildren: () => import('./pages/categoria/lista-categoria/lista-categoria.module').then( m => m.ListaCategoriaPageModule)
   },
   {
     path: 'formulario-categoria',
     loadChildren: () => import('./pages/categoria/formulario-categoria/formulario-categoria.module').then( m => m.FormularioCategoriaPageModule)
+  },
+  {
+    path: 'lista-produto',
+    loadChildren: () => import('./pages/produto/lista-produto/lista-produto.module').then( m => m.ListaProdutoPageModule)
+  },
+  {
+    path: 'formulario-produto',
+    loadChildren: () => import('./pages/produto/formulario-produto/formulario-produto.module').then( m => m.FormularioProdutoPageModule)
   },
 ];
 

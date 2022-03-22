@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ProdutoService } from '../services/produto.service';
+
+import { ProdutoService } from 'src/app/services/produto.service';
 
 @Component({
-  selector: 'app-teste',
-  templateUrl: './teste.page.html',
-  styleUrls: ['./teste.page.scss'],
+  selector: 'app-formulario-produto',
+  templateUrl: './formulario-produto.page.html',
+  styleUrls: ['./formulario-produto.page.scss'],
 })
-export class TestePage implements OnInit {
-
+export class FormularioProdutoPage implements OnInit {
   public formulario: FormGroup;
 
   constructor(
@@ -35,7 +35,7 @@ export class TestePage implements OnInit {
     this.produtoService.salvarProduto(this.formulario.value)
     .then(res => {
         console.log(res)
-        this.rota.navigate([`teste`])
+        this.rota.navigate([`lista-produto`])
       }, error => console.log(error));
   }
 

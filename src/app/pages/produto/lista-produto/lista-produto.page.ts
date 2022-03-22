@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ProdutoService } from '../../services/produto.service';
-import { Produto } from '../../models/produto.model';
+import { Produto } from 'src/app/models/produto.model';
+import { ProdutoService } from 'src/app/services/produto.service';
 
 @Component({
   selector: 'app-lista-produto',
-  templateUrl: './lista-produto.component.html',
-  styleUrls: ['./lista-produto.component.scss'],
+  templateUrl: './lista-produto.page.html',
+  styleUrls: ['./lista-produto.page.scss'],
 })
-export class ListaProdutoComponent implements OnInit {
+export class ListaProdutoPage implements OnInit {
   public produtos: Array<Produto>;
 
   constructor(private produtoService: ProdutoService) {}
@@ -33,4 +33,7 @@ export class ListaProdutoComponent implements OnInit {
     console.log('Id: ', id);
   }
 
+  public deletarProduto(id) {
+    console.log('Id: ', id);
+  }
 }

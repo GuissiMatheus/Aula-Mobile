@@ -34,5 +34,7 @@ export class ListaCategoriaPage implements OnInit {
     console.log('Id: ', id);
   }
 
-
+  public deletarCategoria(id) {
+    console.log('Id: ', id);
+  }
 }
