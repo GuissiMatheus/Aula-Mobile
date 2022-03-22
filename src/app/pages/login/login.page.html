@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <form [formGroup]="formulario">
+      <ion-item>
+        <ion-label>Usuário:</ion-label>
+        <ion-input formControlName="usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Senha:</ion-label>
+        <ion-input formControlName="senha"></ion-input>
+      </ion-item>
+      <ion-button (click)="logar()" [disabled]="formulario.invalid" color="primary" expand="block">Logar</ion-button>
+    </form>
+  </div>
+</ion-content>

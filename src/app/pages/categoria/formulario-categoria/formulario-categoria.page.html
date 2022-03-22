@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button defaultHref="lista-categoria"></ion-back-button>
     </ion-buttons>
     <ion-title>Cadastro de Categoria</ion-title>
   </ion-toolbar>
@@ -11,7 +11,7 @@
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
+        <ion-back-button defaultHref="lista-categoria"></ion-back-button>
       </ion-buttons>
       <ion-title size="large">Cadastro de Categoria</ion-title>
     </ion-toolbar>
@@ -23,7 +23,7 @@
         <ion-label>Nome:</ion-label>
         <ion-input formControlName="descricao"></ion-input>
       </ion-item>
-      <ion-button (click)="salvarCategoria()" color="success" expand="block">Salvar Categoria</ion-button>
+      <ion-button (click)="salvarCategoria()" [disabled]="formulario.invalid" color="success" expand="block">Salvar Categoria</ion-button>
     </form>
   </div>
 </ion-content>

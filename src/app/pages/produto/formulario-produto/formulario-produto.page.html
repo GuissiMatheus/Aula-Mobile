@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button defaultHref="lista-produto"></ion-back-button>
     </ion-buttons>
     <ion-title>Cadastro de Produto</ion-title>
   </ion-toolbar>
@@ -11,7 +11,7 @@
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
+        <ion-back-button defaultHref="lista-produto"></ion-back-button>
       </ion-buttons>
       <ion-title size="large">Cadastro de Produto</ion-title>
     </ion-toolbar>
@@ -39,7 +39,7 @@
         <ion-label>Quantidade:</ion-label>
         <ion-input formControlName="quantidade"></ion-input>
       </ion-item>
-      <ion-button (click)="salvarProduto()" color="success" expand="block">Salvar Produto</ion-button>
+      <ion-button (click)="salvarProduto()" [disabled]="formulario.invalid" color="success" expand="block">Salvar Produto</ion-button>
     </form>
   </div>
 </ion-content>

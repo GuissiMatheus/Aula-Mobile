@@ -27,6 +27,18 @@ const routes: Routes = [
     path: 'formulario-produto',
     loadChildren: () => import('./pages/produto/formulario-produto/formulario-produto.module').then( m => m.FormularioProdutoPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'formulario-perfil',
+    loadChildren: () => import('./pages/perfil/formulario-perfil/formulario-perfil.module').then( m => m.FormularioPerfilPageModule)
+  },
+  {
+    path: 'visualizar-perfil',
+    loadChildren: () => import('./pages/perfil/visualizar-perfil/visualizar-perfil.module').then( m => m.VisualizarPerfilPageModule)
+  },
 ];
 
 @NgModule({

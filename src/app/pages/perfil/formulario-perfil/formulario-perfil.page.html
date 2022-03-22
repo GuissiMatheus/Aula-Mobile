@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastro de Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">Cadastro de Usuário</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <form [formGroup]="formulario">
+      <ion-item>
+        <ion-label>Nome:</ion-label>
+        <ion-input formControlName="nome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Gênero:</ion-label>
+        <ion-input formControlName="genero"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Nascimento:</ion-label>
+        <ion-input formControlName="nascimento"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Endereço:</ion-label>
+        <ion-input formControlName="endereco"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Telefone:</ion-label>
+        <ion-input formControlName="telefone"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email:</ion-label>
+        <ion-input formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Senha:</ion-label>
+        <ion-input formControlName="senha"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Foto:</ion-label>
+        <ion-input formControlName="foto"></ion-input>
+      </ion-item>
+      <ion-button (click)="salvarUsuario()" [disabled]="formulario.invalid" color="success" expand="block">Salvar Usuário</ion-button>
+    </form>
+  </div>
+</ion-content>
