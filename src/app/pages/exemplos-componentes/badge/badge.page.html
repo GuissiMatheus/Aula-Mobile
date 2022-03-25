@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="lista-exemplos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Badge</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="lista-exemplos"></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">Badge</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <ion-list>
+      <ion-list-header>Badges</ion-list-header>
+      <ion-item>
+        <ion-label>Matérias</ion-label>
+        <ion-badge slot="end">10</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Média</ion-label>
+        <ion-badge color="warning" slot="end">5</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Provas</ion-label>
+        <ion-badge color="danger" slot="end">+8000</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Trabalhos</ion-label>
+        <ion-badge color="light" slot="end">999</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-badge color="dark" slot="start">5</ion-badge>
+          <ion-label> ou </ion-label>
+        <ion-badge color="dark" slot="end">10</ion-badge>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

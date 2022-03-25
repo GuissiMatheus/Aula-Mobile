@@ -39,6 +39,26 @@ const routes: Routes = [
     path: 'visualizar-perfil',
     loadChildren: () => import('./pages/perfil/visualizar-perfil/visualizar-perfil.module').then( m => m.VisualizarPerfilPageModule)
   },
+  {
+    path: 'lista-exemplos',
+    loadChildren: () => import('./pages/exemplos-componentes/lista-exemplos/lista-exemplos.module').then( m => m.ListaExemplosPageModule)
+  },
+  {
+    path: 'action-sheet',
+    loadChildren: () => import('./pages/exemplos-componentes/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
+  },
+  {
+    path: 'alert',
+    loadChildren: () => import('./pages/exemplos-componentes/alert/alert.module').then( m => m.AlertPageModule)
+  },
+  {
+    path: 'badge',
+    loadChildren: () => import('./pages/exemplos-componentes/badge/badge.module').then( m => m.BadgePageModule)
+  },
+  {
+    path: 'button',
+    loadChildren: () => import('./pages/exemplos-componentes/button/button.module').then( m => m.ButtonPageModule)
+  },
 ];
 
 @NgModule({
