@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="lista-exemplos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="lista-exemplos"></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">Card</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Tarefa</ion-card-subtitle>
+        <ion-card-title>Criar Lista de Exemplos dos Componentes</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        Criar pages de todos os exemplos dos componentes do Ionic e mandar para o professor.
+      </ion-card-content>
+
+      <ion-item>
+        <ion-icon name="document-attach-outline" slot="start"></ion-icon>
+        <ion-label>Lista de Exemplos.pdf</ion-label>
+        <ion-button fill="outline" slot="end">Ver</ion-button>
+      </ion-item>
+    </ion-card>
+  </div>
+</ion-content>

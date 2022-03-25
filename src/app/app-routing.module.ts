@@ -59,6 +59,10 @@ const routes: Routes = [
     path: 'button',
     loadChildren: () => import('./pages/exemplos-componentes/button/button.module').then( m => m.ButtonPageModule)
   },
+  {
+    path: 'card',
+    loadChildren: () => import('./pages/exemplos-componentes/card/card.module').then( m => m.CardPageModule)
+  },
 ];
 
 @NgModule({
