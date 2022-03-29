@@ -62,7 +62,27 @@ const routes: Routes = [
   {
     path: 'card',
     loadChildren: () => import('./pages/exemplos-componentes/card/card.module').then( m => m.CardPageModule)
+  },  {
+    path: 'checkbox',
+    loadChildren: () => import('./pages/exemplos-componentes/checkbox/checkbox.module').then( m => m.CheckboxPageModule)
   },
+  {
+    path: 'chip',
+    loadChildren: () => import('./pages/exemplos-componentes/chip/chip.module').then( m => m.ChipPageModule)
+  },
+  {
+    path: 'content',
+    loadChildren: () => import('./pages/exemplos-componentes/content/content.module').then( m => m.ContentPageModule)
+  },
+  {
+    path: 'date-time-pickers',
+    loadChildren: () => import('./pages/exemplos-componentes/date-time-pickers/date-time-pickers.module').then( m => m.DateTimePickersPageModule)
+  },
+  {
+    path: 'floating-action-button',
+    loadChildren: () => import('./pages/exemplos-componentes/floating-action-button/floating-action-button.module').then( m => m.FloatingActionButtonPageModule)
+  },
+
 ];
 
 @NgModule({

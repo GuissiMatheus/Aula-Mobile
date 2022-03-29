@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="lista-exemplos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Picker de Data e Hora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="lista-exemplos"></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">Picker de Data e Hora</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <ion-datetime locale="pt-BR" [showClearButton]="true" [(ngModel)]="data">
+      <div slot="title">Picker com botão Clear</div>
+    </ion-datetime>
+  </div>
+  <br>
+  {{ data }}
+</ion-content>

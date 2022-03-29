@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="lista-exemplos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Chip</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="lista-exemplos"></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">Chip</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>      
+    <ion-chip>
+      <ion-label>Padrão</ion-label>
+    </ion-chip>
+
+    <ion-chip color="danger">
+      <ion-label color="dark">Cores diferentes</ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="medium">Com um símbolo</ion-label>
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-icon name="pin" color="primary"></ion-icon>
+      <ion-label>Com símboloS</ion-label>
+      <ion-icon name="close"></ion-icon>
+    </ion-chip>
+  </div>
+</ion-content>
