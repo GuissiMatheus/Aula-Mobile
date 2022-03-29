@@ -82,6 +82,10 @@ const routes: Routes = [
     path: 'floating-action-button',
     loadChildren: () => import('./pages/exemplos-componentes/floating-action-button/floating-action-button.module').then( m => m.FloatingActionButtonPageModule)
   },
+  {
+    path: 'revisao',
+    loadChildren: () => import('./pages/revisao/revisao.module').then( m => m.RevisaoPageModule)
+  },
 
 ];
 

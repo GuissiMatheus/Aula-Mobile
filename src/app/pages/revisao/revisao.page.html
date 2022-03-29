@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Revisão</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">Revisão</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <p><strong>Interpolação - {{'{{  }}'}}</strong></p>
+    <p>Nome: {{ nome }}</p>
+    <p>Uppercase Pipe: {{ nome | uppercase }}</p>
+    <p>TitleCase Pipe: {{ nome | titlecase }}</p>
+    <ion-input [(ngModel)]="nome"></ion-input>
+  </div>
+
+  <div id="container">
+    <p><strong>Property Binding - [[ ]]</strong></p>
+    <img [src]="img">
+  </div>
+
+  <div id="container">
+    <p><strong>Event Binding - (( ))</strong></p>
+    <ion-button (click)="add()">+</ion-button>
+    <ion-button (click)="sub()">-</ion-button>
+    <p>Contador: <span [ngClass]="{'negativo': contador < 0}">{{ contador }}</span></p>
+  </div>
+
+  <div id="container">
+    <p><strong>Exercício</strong></p>
+    <ion-input type="number" [(ngModel)]="valor1"></ion-input>
+    <ion-input type="number" [(ngModel)]="valor2"></ion-input>
+    <ion-button (click)="somar()">Somar</ion-button>
+    <p>Resultado: <span [ngClass]="{'negativo': resultado < 0}">{{ resultado }}</span></p>
+    <ion-badge *ngIf="resultado >= 6" ion-badge color="success">Aluno Aprovado</ion-badge>
+    <ion-badge *ngIf="resultado < 6" color="danger">Aluno Reprovado! Média menor que 6!</ion-badge>
+  </div>
+
+  <div id="container">
+    <p><strong>Lista ngFor</strong></p>
+    <ion-input [(ngModel)]="time"></ion-input>
+    <ion-button (click)="pushLista()">Push</ion-button>
+    <p>{{ times | json }}</p>
+    <ion-list>
+      <ion-item *ngFor="let item of times">
+        {{ item }}
+      </ion-item>
+    </ion-list>
+
+  </div>
+</ion-content>
