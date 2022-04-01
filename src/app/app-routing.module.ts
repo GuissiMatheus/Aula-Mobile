@@ -86,6 +86,10 @@ const routes: Routes = [
     path: 'revisao',
     loadChildren: () => import('./pages/revisao/revisao.module').then( m => m.RevisaoPageModule)
   },
+  {
+    path: 'revisao2',
+    loadChildren: () => import('./pages/revisao2/revisao2.module').then( m => m.Revisao2PageModule)
+  },
 
 ];
 

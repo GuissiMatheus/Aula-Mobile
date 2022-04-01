@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Revisão 2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">Revisão 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <h5>Calcular Média de 4 Notas</h5>
+
+    <form [formGroup]="formulario">
+      <ion-item>
+        <ion-label>Nota 1:</ion-label>
+        <ion-input formControlName="nota1" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Nota 2:</ion-label>
+        <ion-input formControlName="nota2" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Nota 3:</ion-label>
+        <ion-input formControlName="nota3" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Nota 4:</ion-label>
+        <ion-input formControlName="nota4" type="number"></ion-input>
+      </ion-item>
+      <ion-button (click)="calcular()" [disabled]="formulario.invalid" color="success" expand="block">Calcular</ion-button>
+    </form>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Sua Média:</ion-card-subtitle>
+        <ion-card-title>{{ media }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>
