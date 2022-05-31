@@ -62,7 +62,8 @@ const routes: Routes = [
   {
     path: 'card',
     loadChildren: () => import('./pages/exemplos-componentes/card/card.module').then( m => m.CardPageModule)
-  },  {
+  },
+  {
     path: 'checkbox',
     loadChildren: () => import('./pages/exemplos-componentes/checkbox/checkbox.module').then( m => m.CheckboxPageModule)
   },
@@ -90,6 +91,15 @@ const routes: Routes = [
     path: 'revisao2',
     loadChildren: () => import('./pages/revisao2/revisao2.module').then( m => m.Revisao2PageModule)
   },
+  {
+    path: 'contact-list',
+    loadChildren: () => import('./pages/contact-list/contact-list.module').then( m => m.ContactListPageModule)
+  },
+  {
+    path: 'contact-add',
+    loadChildren: () => import('./pages/contact-add/contact-add.module').then( m => m.ContactAddPageModule)
+  },
+
 
 ];
 
