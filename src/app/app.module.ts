@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -9,6 +9,7 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { Drivers } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,10 +22,13 @@ import { AppRoutingModule } from './app-routing.module';
     CommonModule,
     IonicStorageModule.forRoot({
       name: '_myDB',
-      driverOrder: ['indexeddb', 'sqlite', 'websql']
+      driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]
     })
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+    DatePipe,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

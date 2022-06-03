@@ -10,14 +10,20 @@
 <ion-content>
   <ion-item>
     <ion-label stacked>Nome</ion-label>
-    <ion-input></ion-input>
+    <ion-input type="text" [(ngModel)]="contato.name"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label stacked>Telefone</ion-label>
-    <ion-input></ion-input>
+    <ion-input type="tel" [(ngModel)]="contato.phone"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label stacked>Email</ion-label>
-    <ion-input></ion-input>
+    <ion-input type="email" [(ngModel)]="contato.email"></ion-input>
   </ion-item>
+  <ion-item>
+    <ion-label stacked>Ativo</ion-label>
+    <ion-checkbox [(ngModel)]="contato.active"></ion-checkbox>
+  </ion-item>
+
+  <ion-button expand="block" (click)="save()">Salvar</ion-button>
 </ion-content>

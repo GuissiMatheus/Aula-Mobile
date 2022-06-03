@@ -9,4 +9,12 @@
 
 <ion-content>
   <ion-button expand="block" routerLink="/contact-add">Novo Contato</ion-button>
+
+  <ion-list>
+    <ion-card *ngFor="let item of contacts">
+      <p>{{ item.contact.name }}</p>
+      <p>{{ item.contact.email }}</p>
+      <p>{{ item.contact.phone }}</p>
+    </ion-card>
+  </ion-list>
 </ion-content>
